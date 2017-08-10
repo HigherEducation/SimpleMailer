@@ -1,0 +1,21 @@
+{
+    "name": "HigherEducation/SimpleMailer",
+    "type": "library",
+    "description": "Wrapper for PHPMailer when using Gmail and SMTP",
+    "authors": [
+        {
+            "name": "Dave Robb",
+            "email": "drobb@highereducation.com"
+        }
+    ],
+    "require": {
+        "php": "^5.3.0 || ^7.0",
+        "phpmailer/phpmailer": "^5.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "HigherEducation\\SimpleMailer\\": "src/"
+        }
+    },
+    "license": "LGPL-2.1"
+}
