@@ -16,7 +16,7 @@ namespace HigherEducation\SimpleMailer;
 class SimpleMailer
 {
     /**
-     * The GmailSMTPMailer Version number.
+     * The SimpleMailer Version number.
      * @var string
      */
     public $Version = '0.1.0';
@@ -30,7 +30,7 @@ class SimpleMailer
 
     /**
      * The receiving email address
-     * Passed to and set by __construct() when a new GmailSMTPMailer is instantiated
+     * Passed to and set by __construct() when a new SimpleMailer is instantiated
      * @var string
      * @access protected
      */
@@ -58,7 +58,7 @@ class SimpleMailer
 
     /**
      * Password of the Gmail account the email should be sent through
-     * Passed to and set by __construct() when a new GmailSMTPMailer is instantiated
+     * Passed to and set by __construct() when a new SimpleMailer is instantiated
      * @var string
      * @access protected
      */
@@ -72,7 +72,7 @@ class SimpleMailer
 
     /**
      * Username of the Gmail account the email should be sent through
-     * Passed to and set by __construct() when a new GmailSMTPMailer is instantiated
+     * Passed to and set by __construct() when a new SimpleMailer is instantiated
      * @var string
      * @access protected
      */
