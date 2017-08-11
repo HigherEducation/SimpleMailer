@@ -1,5 +1,5 @@
 {
-    "name": "higher-education/simple-mailer",
+    "name": "highereducation/simple-mailer",
     "type": "library",
     "description": "Wrapper for PHPMailer when using Gmail and SMTP",
     "authors": [
