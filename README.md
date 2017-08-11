@@ -13,9 +13,9 @@ These should be passed to the class constructor as an associative array:
 
 ```php
 $mailer = new SimpleMailer([
-		"username" => "yourGmailUsername",
-		"password" => "yourGmailPassword",
-		"emailTo"  => "your@emailaddress.com"
+  "username" => "yourGmailUsername",
+	"password" => "yourGmailPassword",
+	"emailTo"  => "your@emailaddress.com"
 ]);
 ```
 
@@ -83,13 +83,13 @@ SimpleMailer offers 2 response types.  By default each point of failure in the c
 
 ```php
 try {
-	$mailer = new SimpleMailer([
-		"username" => "yourGmailUsername",
-		"password" => "yourGmailPassword"
-	]);
+  $mailer = new SimpleMailer([
+    "username" => "yourGmailUsername",
+    "password" => "yourGmailPassword"
+  ]);
 } catch (Exception $e) {
-	echo "Something went wrong:" $e->getMessage();
-	# Missing receiving email address
+  echo "Something went wrong:" $e->getMessage();
+  # Missing receiving email address
 }
 ```
 
@@ -104,8 +104,8 @@ Now SimpleMailer will handle the shutdown of your PHP script after sending the r
 #### Example JSON error response:
 ```json
 {
-	"status": 400,
-	"detail": "Required property missing: Message"
+  "status": 400,
+  "detail": "Required property missing: Message"
 }
 ```
 
@@ -116,9 +116,7 @@ The following example assumes you're using JQuery and Composer to autoload class
 #### The Form
 
 ```php
-<?php
-use HigherEducation\SimpleMailer\SimpleMailer;
-?>
+<?php use HigherEducation\SimpleMailer\SimpleMailer; ?>
 
 <form method="post" action="/contact/">
   <label>Full Name</label>
@@ -156,15 +154,16 @@ use HigherEducation\SimpleMailer\SimpleMailer;
 use HigherEducation\SimpleMailer\SimpleMailer;
 
 if (empty($_SERVER['HTTP_X_REQUESTED_WITH'])) {
-    http_response_code(403);
-    exit;
+  http_response_code(403);
+  exit;
 }
 
 $mailer = new SimpleMailer([
-	"username" => "yourGmailUsername",
-	"password" => "yourGmailPassword",
-	"emailTo"  => "your@emailaddress.com"
+  "username" => "yourGmailUsername",
+  "password" => "yourGmailPassword",
+  "emailTo"  => "your@emailaddress.com"
 ]);
+
 $mailer->Ajax       = true;
 $mailer->FromEmail  = $_POST['email'];
 $mailer->FromName   = $_POST['name'];
